@@ -50,8 +50,10 @@ Created by Konrad Bizer
 
 
 
-
 Example:
+
 Input:"Compare Tensor Processing Units"
+
 Output:
+
 ![Example of modified Llama2 70B output](/example.png)

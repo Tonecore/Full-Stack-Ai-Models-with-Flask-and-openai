@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    13B
+{% endblock %}
+
+{% block main %}
+<main>
+    <h1>This is the Llama 13B chat bot</h1>
+
+    <!-- Bot response window -->
+    <div id="botResponse" class="message-container">
+        {% if bot_response13B %}
+            <div class="bot-message">{{ bot_response13B }}</div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <button id="playButton" type="button" class="btn btn-success fixed-size">Play</button>
+                <button id="stopButton" type="button" class="btn btn-danger fixed-size">Stop</button>
+            </div>
+                               
+            <p></p>
+        {% endif %}
+    </div>
+    
+    <!-- Input field -->
+    <form method="POST">
+        <input id="user-input13B" class="message-input" autocomplete="off" name="input" placeholder="Start chat here" type="text">
+        <button type="submit" class="send-button">&#10148;</button>
+    </form>
+</main>
+
+<script>
+    var speechSynthesisInstance = window.speechSynthesis;
+    var currentUtterance = null;
+
+    // Function to play text-to-speech with a specified voice
+    function playTextToSpeech(text) {
+        // Stop any ongoing speech
+        if (currentUtterance) {
+            speechSynthesisInstance.cancel();
+            currentUtterance = null;
+        }
+
+        var speech = new SpeechSynthesisUtterance();
+        speech.text = text;
+
+        // Set voice
+        var voices = speechSynthesis.getVoices();
+        var desiredVoice = voices.find(function(voice) {
+            return voice.name === 'English (Scotland)';
+        });
+        speech.voice = desiredVoice;
+
+        speechSynthesisInstance.speak(speech);
+        currentUtterance = speech;
+    }
+
+    // Event listener for play button
+    var playButton = document.getElementById("playButton");
+    if (playButton) {
+        playButton.addEventListener("click", function() {
+            var botResponse = document.querySelector("#botResponse .bot-message");
+            var botResponseContent = botResponse ? botResponse.innerText.trim() : "";
+            if (botResponseContent) {
+                playTextToSpeech(botResponseContent);
+            }
+        });
+    }
+
+    // Event listener for stop button
+    var stopButton = document.getElementById("stopButton");
+    if (stopButton) {
+        stopButton.addEventListener("click", function() {
+            if (currentUtterance) {
+                speechSynthesisInstance.cancel();
+                currentUtterance = null;
+            }
+        });
+    }
+</script>
+{% endblock %}

@@ -46,9 +46,6 @@ Script function: First JavaScript stops any ongoing audio output by setting "cur
 This project showcases the integration of advanced natural language processing models into a Flask web application, providing users with interactive chatbot experiences. By leveraging the power of large language models and APIs, the application enables seamless communication with the Llama chatbots, offering various functionalities tailored to different user needs. With further refinement and optimization, this project sets the foundation for the development of more sophisticated and efficient conversational interfaces in future endeavors.
 
 
-Created by Konrad Bizer
-
-
 
 Example:
 
@@ -57,3 +54,6 @@ Input:"Compare Tensor Processing Units"
 Output:
 
 ![Example of modified Llama2 70B output](/example.png)
+
+
+Created by Konrad Bizer

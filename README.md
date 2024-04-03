@@ -2,11 +2,10 @@
 #### Video Demo:  <https://youtu.be/9R-W5Xo9fOk>
 #### Description:
 
-# Welcome to my final project: Projekt Llama
+# Welcome To Projekt Llama
 
 In this project, I built a Flask-based web application and connected it with an API to Meta's Llama chatbots. 
-First, I had to learn how to operate large language models. Meta offers its own free courses on how to operate their Llama 2 models. 
-I took the "Prompt Engineering with Llama 2" course on deeplearning.ai to understand the topic.
+The goal was to set up and operate an AI chatbot in a way that it generates high-quality outputs with legitimate sources.
 
 **Flask Setup:**
 

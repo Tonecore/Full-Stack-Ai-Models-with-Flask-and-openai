@@ -48,4 +48,10 @@ This project showcases the integration of advanced natural language processing m
 
 Created by Konrad Bizer
 
-Output Example: ![Example of modified Llama2 70B output](/example.png)
+
+
+
+Example:
+Input:"Compare Tensor Processing Units"
+Output:
+![Example of modified Llama2 70B output](/example.png)

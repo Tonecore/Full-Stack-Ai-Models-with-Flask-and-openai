@@ -5,7 +5,7 @@
 # Welcome To Projekt Llama
 
 In this project, I built a Flask-based web application and connected it with an API to Meta's Llama chatbots. 
-The goal was to set up and operate an AI chatbot in a way that it generates high-quality outputs with legitimate sources.
+The goal was to set up and operate an AI chatbot in a way that it generates high-quality outputs with quotes from legitimate sources.
 
 **Flask Setup:**
 
